@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/parallels/share/visual_slam_lecture/PerspectiveNPoints/pose_estimation_3d2d.cpp" "/home/parallels/share/visual_slam_lecture/PerspectiveNPoints/build/CMakeFiles/pose_estimation_3d2d.dir/pose_estimation_3d2d.cpp.o"
+  "/home/parallels/Desktop/visual_slam_lecture/PerspectiveNPoints/pose_estimation_3d2d.cpp" "/home/parallels/Desktop/visual_slam_lecture/PerspectiveNPoints/build/CMakeFiles/pose_estimation_3d2d.dir/pose_estimation_3d2d.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,8 +15,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/include/opencv"
   "/usr/include/eigen3"
+  "/usr/include/opencv4"
   )
 
 # Targets to which this target links.

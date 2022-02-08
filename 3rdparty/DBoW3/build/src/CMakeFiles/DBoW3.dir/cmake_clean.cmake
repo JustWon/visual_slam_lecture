@@ -8,9 +8,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/DBoW3.dir/Vocabulary.cpp.o"
   "CMakeFiles/DBoW3.dir/quicklz.c.o"
   "libDBoW3.pdb"
-  "libDBoW3.so.0.0.1"
   "libDBoW3.so"
   "libDBoW3.so.0.0"
+  "libDBoW3.so.0.0.1"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -26,8 +26,8 @@ int main(int argc, char **argv) {
     cout << "usage: pose_estimation_2d2d img1 img2" << endl;
     return 1;
   }
-  Mat img_1 = imread(argv[1], CV_LOAD_IMAGE_COLOR);
-  Mat img_2 = imread(argv[2], CV_LOAD_IMAGE_COLOR);
+  Mat img_1 = imread(argv[1], cv::IMREAD_COLOR);
+  Mat img_2 = imread(argv[2], cv::IMREAD_COLOR);
   assert(img_1.data && img_2.data && "Can not load images!");
 
   vector<KeyPoint> keypoints_1, keypoints_2;
@@ -115,7 +115,7 @@ void pose_estimation_2d2d(std::vector<KeyPoint> keypoints_1,
   }
 
   Mat fundamental_matrix;
-  fundamental_matrix = findFundamentalMat(points1, points2, CV_FM_8POINT);
+  fundamental_matrix = findFundamentalMat(points1, points2, cv::FM_8POINT);
   cout << "fundamental_matrix is " << endl << fundamental_matrix << endl;
 
   Point2d principal_point(325.1, 249.7);  

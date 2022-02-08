@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/pose_estimation_2d2d.dir/pose_estimation_2d2d.cpp.o"
-  "pose_estimation_2d2d.pdb"
   "pose_estimation_2d2d"
+  "pose_estimation_2d2d.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

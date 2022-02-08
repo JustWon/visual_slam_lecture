@@ -49,15 +49,15 @@ int main(int argc, char **argv) {
     cout << "usage: pose_estimation_3d2d img1 img2 depth1 depth2" << endl;
     return 1;
   }
-  Mat img_1 = imread(argv[1], CV_LOAD_IMAGE_COLOR);
-  Mat img_2 = imread(argv[2], CV_LOAD_IMAGE_COLOR);
+  Mat img_1 = imread(argv[1], cv::IMREAD_COLOR);
+  Mat img_2 = imread(argv[2], cv::IMREAD_COLOR);
   assert(img_1.data && img_2.data && "Can not load images!");
 
   vector<KeyPoint> keypoints_1, keypoints_2;
   vector<DMatch> matches;
   find_feature_matches(img_1, img_2, keypoints_1, keypoints_2, matches);
 
-  Mat d1 = imread(argv[3], CV_LOAD_IMAGE_UNCHANGED);       
+  Mat d1 = imread(argv[3], cv::IMREAD_UNCHANGED);       
   Mat K = (Mat_<double>(3, 3) << 520.9, 0, 325.1, 0, 521.0, 249.7, 0, 0, 1);
   vector<Point3f> pts_3d;
   vector<Point2f> pts_2d;
@@ -325,7 +325,7 @@ void bundleAdjustmentG2O(
   for (size_t i = 0; i < points_2d.size(); ++i) {
     auto p2d = points_2d[i];
     auto p3d = points_3d[i];
-    EdgeProjection *edge = new EdgeProjection(p3d, -);
+    EdgeProjection *edge = new EdgeProjection(p3d, K_eigen);
     edge->setId(index);
     edge->setVertex(0, vertex_pose);
     edge->setMeasurement(p2d);
