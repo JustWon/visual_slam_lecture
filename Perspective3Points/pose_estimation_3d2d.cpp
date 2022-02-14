@@ -74,13 +74,14 @@ int main(int argc, char **argv) {
   cout << "3d-2d pairs: " << pts_3d.size() << endl;
 
   chrono::steady_clock::time_point t1 = chrono::steady_clock::now();
-  Mat r, t;
-  solvePnP(pts_3d, pts_2d, K, Mat(), r, t, false); 
+  Mat r, t, inliers;
+  solvePnPRansac(pts_3d, pts_2d, K, Mat(), r, t, 
+                 false, 100, 8.0, 0.99, inliers, SOLVEPNP_P3P);
   Mat R;
   cv::Rodrigues(r, R); 
   chrono::steady_clock::time_point t2 = chrono::steady_clock::now();
   chrono::duration<double> time_used = chrono::duration_cast<chrono::duration<double>>(t2 - t1);
-  cout << "solve pnp in opencv cost time: " << time_used.count() << " seconds." << endl;
+  cout << "solve p3p in opencv cost time: " << time_used.count() << " seconds." << endl;
 
   cout << "R=" << endl << R << endl;
   cout << "t=" << endl << t << endl;
@@ -98,7 +99,7 @@ int main(int argc, char **argv) {
   bundleAdjustmentGaussNewton(pts_3d_eigen, pts_2d_eigen, K, pose_gn);
   t2 = chrono::steady_clock::now();
   time_used = chrono::duration_cast<chrono::duration<double>>(t2 - t1);
-  cout << "solve pnp by gauss newton cost time: " << time_used.count() << " seconds." << endl;
+  cout << "solve p3p by gauss newton cost time: " << time_used.count() << " seconds." << endl;
 
   cout << "calling bundle adjustment by g2o" << endl;
   Sophus::SE3d pose_g2o;
@@ -106,7 +107,7 @@ int main(int argc, char **argv) {
   bundleAdjustmentG2O(pts_3d_eigen, pts_2d_eigen, K, pose_g2o);
   t2 = chrono::steady_clock::now();
   time_used = chrono::duration_cast<chrono::duration<double>>(t2 - t1);
-  cout << "solve pnp by g2o cost time: " << time_used.count() << " seconds." << endl;
+  cout << "solve p3p by g2o cost time: " << time_used.count() << " seconds." << endl;
   return 0;
 }
 
