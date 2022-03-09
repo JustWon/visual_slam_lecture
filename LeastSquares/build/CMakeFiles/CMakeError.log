@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/parallels/Desktop/visual_slam_lecture/LeastSquares/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_4171e/fast && /usr/bin/make -f CMakeFiles/cmTC_4171e.dir/build.make CMakeFiles/cmTC_4171e.dir/build
+Run Build Command(s):/usr/bin/make cmTC_779ec/fast && /usr/bin/make -f CMakeFiles/cmTC_779ec.dir/build.make CMakeFiles/cmTC_779ec.dir/build
 make[1]: Entering directory '/home/parallels/Desktop/visual_slam_lecture/LeastSquares/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4171e.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_4171e.dir/src.c.o   -c /home/parallels/Desktop/visual_slam_lecture/LeastSquares/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_4171e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4171e.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_4171e.dir/src.c.o  -o cmTC_4171e 
-/usr/bin/ld: CMakeFiles/cmTC_4171e.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_779ec.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_779ec.dir/src.c.o   -c /home/parallels/Desktop/visual_slam_lecture/LeastSquares/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_779ec
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_779ec.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_779ec.dir/src.c.o  -o cmTC_779ec 
+/usr/bin/ld: CMakeFiles/cmTC_779ec.dir/src.c.o: in function `main':
 src.c:(.text+0x48): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x50): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x5c): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_4171e.dir/build.make:87: cmTC_4171e] Error 1
+make[1]: *** [CMakeFiles/cmTC_779ec.dir/build.make:87: cmTC_779ec] Error 1
 make[1]: Leaving directory '/home/parallels/Desktop/visual_slam_lecture/LeastSquares/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_4171e/fast] Error 2
+make: *** [Makefile:121: cmTC_779ec/fast] Error 2
 
 
 Source file was:
@@ -41,18 +41,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/parallels/Desktop/visual_slam_lecture/LeastSquares/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_97e1b/fast && /usr/bin/make -f CMakeFiles/cmTC_97e1b.dir/build.make CMakeFiles/cmTC_97e1b.dir/build
+Run Build Command(s):/usr/bin/make cmTC_b9c55/fast && /usr/bin/make -f CMakeFiles/cmTC_b9c55.dir/build.make CMakeFiles/cmTC_b9c55.dir/build
 make[1]: Entering directory '/home/parallels/Desktop/visual_slam_lecture/LeastSquares/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_97e1b.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_97e1b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_97e1b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_97e1b.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_97e1b.dir/CheckFunctionExists.c.o  -o cmTC_97e1b  -lpthreads 
+Building C object CMakeFiles/cmTC_b9c55.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_b9c55.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b9c55
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b9c55.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_b9c55.dir/CheckFunctionExists.c.o  -o cmTC_b9c55  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_97e1b.dir/build.make:87: cmTC_97e1b] Error 1
+make[1]: *** [CMakeFiles/cmTC_b9c55.dir/build.make:87: cmTC_b9c55] Error 1
 make[1]: Leaving directory '/home/parallels/Desktop/visual_slam_lecture/LeastSquares/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_97e1b/fast] Error 2
+make: *** [Makefile:121: cmTC_b9c55/fast] Error 2
 
 
 
