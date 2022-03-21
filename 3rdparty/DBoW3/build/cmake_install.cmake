@@ -1,4 +1,4 @@
-# Install script for directory: /home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3
+# Install script for directory: /share/visual_slam_lecture/3rdparty/DBoW3
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake" TYPE FILE FILES "/home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3/build/FindDBoW3.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake" TYPE FILE FILES "/share/visual_slam_lecture/3rdparty/DBoW3/build/FindDBoW3.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/DBoW3" TYPE FILE FILES "/home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3/build/DBoW3Config.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/DBoW3" TYPE FILE FILES "/share/visual_slam_lecture/3rdparty/DBoW3/build/DBoW3Config.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3/build/src/cmake_install.cmake")
-  include("/home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3/build/utils/cmake_install.cmake")
+  include("/share/visual_slam_lecture/3rdparty/DBoW3/build/src/cmake_install.cmake")
+  include("/share/visual_slam_lecture/3rdparty/DBoW3/build/utils/cmake_install.cmake")
 
 endif()
 
@@ -60,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/share/visual_slam_lecture/3rdparty/DBoW3/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

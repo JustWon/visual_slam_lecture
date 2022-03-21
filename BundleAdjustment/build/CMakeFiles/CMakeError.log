@@ -1,58 +1,56 @@
-Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/parallels/Desktop/visual_slam_lecture/BundleAdjustment/build/CMakeFiles/CMakeTmp
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /share/visual_slam_lecture/BundleAdjustment/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_b6038/fast && /usr/bin/make -f CMakeFiles/cmTC_b6038.dir/build.make CMakeFiles/cmTC_b6038.dir/build
-make[1]: Entering directory '/home/parallels/Desktop/visual_slam_lecture/BundleAdjustment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b6038.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_b6038.dir/src.c.o   -c /home/parallels/Desktop/visual_slam_lecture/BundleAdjustment/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_b6038
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b6038.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_b6038.dir/src.c.o  -o cmTC_b6038 
-/usr/bin/ld: CMakeFiles/cmTC_b6038.dir/src.c.o: in function `main':
-src.c:(.text+0x48): undefined reference to `pthread_create'
-/usr/bin/ld: src.c:(.text+0x50): undefined reference to `pthread_detach'
-/usr/bin/ld: src.c:(.text+0x5c): undefined reference to `pthread_join'
+Run Build Command:"/usr/bin/make" "cmTC_5f93a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5f93a.dir/build.make CMakeFiles/cmTC_5f93a.dir/build
+make[1]: Entering directory '/share/visual_slam_lecture/BundleAdjustment/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5f93a.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_5f93a.dir/CheckSymbolExists.c.o   -c /share/visual_slam_lecture/BundleAdjustment/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_5f93a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5f93a.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_5f93a.dir/CheckSymbolExists.c.o  -o cmTC_5f93a 
+CMakeFiles/cmTC_5f93a.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x14): undefined reference to `pthread_create'
+CheckSymbolExists.c:(.text+0x18): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_b6038.dir/build.make:87: cmTC_b6038] Error 1
-make[1]: Leaving directory '/home/parallels/Desktop/visual_slam_lecture/BundleAdjustment/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_b6038/fast] Error 2
+CMakeFiles/cmTC_5f93a.dir/build.make:97: recipe for target 'cmTC_5f93a' failed
+make[1]: *** [cmTC_5f93a] Error 1
+make[1]: Leaving directory '/share/visual_slam_lecture/BundleAdjustment/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_5f93a/fast' failed
+make: *** [cmTC_5f93a/fast] Error 2
 
-
-Source file was:
+File /share/visual_slam_lecture/BundleAdjustment/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
 #include <pthread.h>
 
-void* test_func(void* data)
+int main(int argc, char** argv)
 {
-  return data;
-}
-
-int main(void)
-{
-  pthread_t thread;
-  pthread_create(&thread, NULL, test_func, NULL);
-  pthread_detach(thread);
-  pthread_join(thread, NULL);
-  pthread_atfork(NULL, NULL, NULL);
-  pthread_exit(NULL);
-
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
   return 0;
+#endif
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/parallels/Desktop/visual_slam_lecture/BundleAdjustment/build/CMakeFiles/CMakeTmp
+Change Dir: /share/visual_slam_lecture/BundleAdjustment/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_75ea4/fast && /usr/bin/make -f CMakeFiles/cmTC_75ea4.dir/build.make CMakeFiles/cmTC_75ea4.dir/build
-make[1]: Entering directory '/home/parallels/Desktop/visual_slam_lecture/BundleAdjustment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_75ea4.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_75ea4.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_75ea4
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75ea4.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_75ea4.dir/CheckFunctionExists.c.o  -o cmTC_75ea4  -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_b5d3d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b5d3d.dir/build.make CMakeFiles/cmTC_b5d3d.dir/build
+make[1]: Entering directory '/share/visual_slam_lecture/BundleAdjustment/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b5d3d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_b5d3d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b5d3d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b5d3d.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_b5d3d.dir/CheckFunctionExists.c.o  -o cmTC_b5d3d -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_75ea4.dir/build.make:87: cmTC_75ea4] Error 1
-make[1]: Leaving directory '/home/parallels/Desktop/visual_slam_lecture/BundleAdjustment/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_75ea4/fast] Error 2
-
+CMakeFiles/cmTC_b5d3d.dir/build.make:97: recipe for target 'cmTC_b5d3d' failed
+make[1]: *** [cmTC_b5d3d] Error 1
+make[1]: Leaving directory '/share/visual_slam_lecture/BundleAdjustment/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_b5d3d/fast' failed
+make: *** [cmTC_b5d3d/fast] Error 2
 
 

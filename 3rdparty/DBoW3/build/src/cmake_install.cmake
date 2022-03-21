@@ -1,4 +1,4 @@
-# Install script for directory: /home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3/src
+# Install script for directory: /share/visual_slam_lecture/3rdparty/DBoW3/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -41,6 +41,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xmainx" OR NOT CMAKE_INSTALL_COMPONE
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libDBoW3.so.0.0.1"
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libDBoW3.so.0.0"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libDBoW3.so"
       )
     if(EXISTS "${file}" AND
        NOT IS_SYMLINK "${file}")
@@ -50,12 +51,14 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xmainx" OR NOT CMAKE_INSTALL_COMPONE
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES
-    "/home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3/build/src/libDBoW3.so.0.0.1"
-    "/home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3/build/src/libDBoW3.so.0.0"
+    "/share/visual_slam_lecture/3rdparty/DBoW3/build/src/libDBoW3.so.0.0.1"
+    "/share/visual_slam_lecture/3rdparty/DBoW3/build/src/libDBoW3.so.0.0"
+    "/share/visual_slam_lecture/3rdparty/DBoW3/build/src/libDBoW3.so"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libDBoW3.so.0.0.1"
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libDBoW3.so.0.0"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libDBoW3.so"
       )
     if(EXISTS "${file}" AND
        NOT IS_SYMLINK "${file}")
@@ -67,34 +70,18 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xmainx" OR NOT CMAKE_INSTALL_COMPONE
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xmainx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libDBoW3.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libDBoW3.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libDBoW3.so"
-         RPATH "")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3/build/src/libDBoW3.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libDBoW3.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libDBoW3.so")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libDBoW3.so")
-    endif()
-  endif()
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xmainx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/DBoW3" TYPE FILE FILES
-    "/home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3/src/BowVector.h"
-    "/home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3/src/DBoW3.h"
-    "/home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3/src/Database.h"
-    "/home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3/src/DescManip.h"
-    "/home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3/src/FeatureVector.h"
-    "/home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3/src/QueryResults.h"
-    "/home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3/src/ScoringObject.h"
-    "/home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3/src/Vocabulary.h"
-    "/home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3/src/exports.h"
-    "/home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3/src/quicklz.h"
-    "/home/parallels/Desktop/visual_slam_lecture/3rdparty/DBoW3/src/timers.h"
+    "/share/visual_slam_lecture/3rdparty/DBoW3/src/BowVector.h"
+    "/share/visual_slam_lecture/3rdparty/DBoW3/src/DBoW3.h"
+    "/share/visual_slam_lecture/3rdparty/DBoW3/src/Database.h"
+    "/share/visual_slam_lecture/3rdparty/DBoW3/src/DescManip.h"
+    "/share/visual_slam_lecture/3rdparty/DBoW3/src/FeatureVector.h"
+    "/share/visual_slam_lecture/3rdparty/DBoW3/src/QueryResults.h"
+    "/share/visual_slam_lecture/3rdparty/DBoW3/src/ScoringObject.h"
+    "/share/visual_slam_lecture/3rdparty/DBoW3/src/Vocabulary.h"
+    "/share/visual_slam_lecture/3rdparty/DBoW3/src/exports.h"
+    "/share/visual_slam_lecture/3rdparty/DBoW3/src/quicklz.h"
+    "/share/visual_slam_lecture/3rdparty/DBoW3/src/timers.h"
     )
 endif()
 
