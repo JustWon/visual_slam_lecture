@@ -17,7 +17,7 @@ int main(int argc, char **argv) {
   double inv_sigma = 1.0 / w_sigma;
   cv::RNG rng;                         
 
-  // data
+  // generate data
   vector<double> x_data, y_data;     
   for (int i = 0; i < N; i++) {
     double x = i / 100.0;
