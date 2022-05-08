@@ -73,6 +73,10 @@ int main(int argc, char **argv) {
 
   cout << "3d-2d pairs: " << pts_3d.size() << endl;
 
+  // solve pnp ransac 
+  // https://github.com/opencv/opencv/blob/4.x/modules/calib3d/src/solvepnp.cpp#L216
+  // p3p solve
+  // https://github.com/opencv/opencv/blob/4.x/modules/calib3d/src/p3p.cpp#L123
   chrono::steady_clock::time_point t1 = chrono::steady_clock::now();
   Mat r, t, inliers;
   solvePnPRansac(pts_3d, pts_2d, K, Mat(), r, t, 
