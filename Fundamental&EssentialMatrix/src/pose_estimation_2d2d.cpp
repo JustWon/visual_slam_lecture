@@ -114,16 +114,22 @@ void pose_estimation_2d2d(std::vector<KeyPoint> keypoints_1,
     points2.push_back(keypoints_2[matches[i].trainIdx].pt);
   }
 
+  // find fundamental matrix
+  // https://github.com/opencv/opencv/blob/4.x/modules/calib3d/src/fundam.cpp#L831
   Mat fundamental_matrix;
   fundamental_matrix = findFundamentalMat(points1, points2, cv::FM_8POINT);
   cout << "fundamental_matrix is " << endl << fundamental_matrix << endl;
 
+  // find essential matrix
+  // https://github.com/opencv/opencv/blob/4.x/modules/calib3d/src/five-point.cpp#L430
   Point2d principal_point(325.1, 249.7);  
   double focal_length = 521;      
   Mat essential_matrix;
   essential_matrix = findEssentialMat(points1, points2, focal_length, principal_point);
   cout << "essential_matrix is " << endl << essential_matrix << endl;
 
+  // recover pose (rotation, translation)
+  // https://github.com/opencv/opencv/blob/4.x/modules/calib3d/src/five-point.cpp#L535
   recoverPose(essential_matrix, points1, points2, R, t, focal_length, principal_point);
   cout << "R is " << endl << R << endl;
   cout << "t is " << endl << t << endl;

@@ -1,3 +1,9 @@
+//
+// Modified by dongwonshin 05-08-22
+//
+// ORB feature extraction example
+// https://github.com/opencv/opencv/blob/4.x/modules/features2d/src/orb.cpp#L970
+
 #include <iostream>
 #include <opencv2/core/core.hpp>
 #include <opencv2/features2d/features2d.hpp>
