@@ -61,18 +61,21 @@ public:
 };
 
 int main(int argc, char **argv) {
-  double ar = 1.0, br = 2.0, cr = 1.0;
-  double ae = 2.0, be = -1.0, ce = 5.0;
+
+  // initialization
+  double ref_a = 1.0, ref_b = 2.0, ref_c = 1.0;
+  double est_a = 2.0, est_b = -1.0, est_c = 5.0;
   int N = 100;                         
   double w_sigma = 1.0;                
   double inv_sigma = 1.0 / w_sigma;
   cv::RNG rng;                         
 
-  vector<double> x_data, y_data;     
+  // generate data
+  vector<double> x_data, y_data;
   for (int i = 0; i < N; i++) {
     double x = i / 100.0;
     x_data.push_back(x);
-    y_data.push_back(exp(ar * x * x + br * x + cr) + rng.gaussian(w_sigma * w_sigma));
+    y_data.push_back(exp(ref_a * x * x + ref_b * x + ref_c) + rng.gaussian(w_sigma * w_sigma));
   }
 
   typedef g2o::BlockSolver<g2o::BlockSolverTraits<3, 1>> BlockSolverType; 
@@ -85,7 +88,7 @@ int main(int argc, char **argv) {
   optimizer.setVerbose(true);      
 
   CurveFittingVertex *v = new CurveFittingVertex();
-  v->setEstimate(Eigen::Vector3d(ae, be, ce));
+  v->setEstimate(Eigen::Vector3d(est_a, est_b, est_c));
   v->setId(0);
   optimizer.addVertex(v);
 
